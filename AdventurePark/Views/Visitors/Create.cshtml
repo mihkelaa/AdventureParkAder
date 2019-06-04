@@ -1,0 +1,47 @@
+﻿@model AdventurePark.Models.Visitors
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Welcome to the adventure park! Please sign in to enter.</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <h5>First name</h5>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VisitorFirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VisitorFirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h5>Last name</h5>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VisitorLastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VisitorLastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h5>Age</h5>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VisitorAge, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VisitorAge, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Enter" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

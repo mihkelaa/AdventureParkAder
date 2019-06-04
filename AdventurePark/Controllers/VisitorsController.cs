@@ -10,120 +10,108 @@ using AdventurePark.Models;
 
 namespace AdventurePark.Controllers
 {
-    public class RidesController : Controller
+    public class VisitorsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Rides
+        // GET: Visitors
         public ActionResult Index()
         {
-            return View(db.Rides.ToList());
+            return View(db.Visitors.ToList());
         }
 
-        [Authorize]
-        public ActionResult IndexAdmin()
-        {
-            return View(db.Rides.ToList());
-        }
-
-        public ActionResult RideRollerCoaster()
-        {
-           return View();
-        }
-
-
-        // GET: Rides/Details/5
+        // GET: Visitors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Rides rides = db.Rides.Find(id);
-            if (rides == null)
+            Visitors visitors = db.Visitors.Find(id);
+            if (visitors == null)
             {
                 return HttpNotFound();
             }
-            return View(rides);
+            return View(visitors);
         }
 
-        // GET: Rides/Create
-        [Authorize]
+        // GET: Visitors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Rides/Create
+        // POST: Visitors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RideID,RideName,RideDifficultyLevel,RideAgeRequirement")] Rides rides)
+        public ActionResult Create([Bind(Include = "VisitorID,VisitorFirstName,VisitorLastName,VisitorAge")] Visitors visitors)
         {
             if (ModelState.IsValid)
             {
-                db.Rides.Add(rides);
+                db.Visitors.Add(visitors);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Index", "Rides", new { area = "" });
             }
 
-            return View(rides);
+            return View(visitors);
         }
 
-        // GET: Rides/Edit/5
+        // GET: Visitors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Rides rides = db.Rides.Find(id);
-            if (rides == null)
+            Visitors visitors = db.Visitors.Find(id);
+            if (visitors == null)
             {
                 return HttpNotFound();
             }
-            return View(rides);
+            return View(visitors);
         }
 
-        // POST: Rides/Edit/5
+        // POST: Visitors/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RideID,RideName,RideDifficultyLevel,RideAgeRequirement")] Rides rides)
+        public ActionResult Edit([Bind(Include = "VisitorID,VisitorFirstName,VisitorLastName,VisitorAge")] Visitors visitors)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(rides).State = EntityState.Modified;
+                db.Entry(visitors).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(rides);
+            return View(visitors);
         }
 
-        // GET: Rides/Delete/5
+        // GET: Visitors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Rides rides = db.Rides.Find(id);
-            if (rides == null)
+            Visitors visitors = db.Visitors.Find(id);
+            if (visitors == null)
             {
                 return HttpNotFound();
             }
-            return View(rides);
+            return View(visitors);
         }
 
-        // POST: Rides/Delete/5
+        // POST: Visitors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Rides rides = db.Rides.Find(id);
-            db.Rides.Remove(rides);
+            Visitors visitors = db.Visitors.Find(id);
+            db.Visitors.Remove(visitors);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

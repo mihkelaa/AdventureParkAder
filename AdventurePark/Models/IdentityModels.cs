@@ -31,5 +31,7 @@ namespace AdventurePark.Models
         }
 
         public System.Data.Entity.DbSet<AdventurePark.Models.Rides> Rides { get; set; }
+
+        public System.Data.Entity.DbSet<AdventurePark.Models.Visitors> Visitors { get; set; }
     }
 }

@@ -1,0 +1,42 @@
+﻿@model AdventurePark.Models.Visitors
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Visitors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorAge)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VisitorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
