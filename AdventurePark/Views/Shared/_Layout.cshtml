@@ -24,7 +24,7 @@
                     @if (User.IsInRole("Admins"))
                     {
                         <li>@Html.ActionLink("Visitor list", "Index", "Visitors")</li>
-                        <li>@Html.ActionLink("Rides list", "Index", "Rides")</li>
+                        <li>@Html.ActionLink("Rides list", "IndexAdmin", "Rides")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

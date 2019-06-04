@@ -16,6 +16,5 @@ namespace AdventurePark.Models
             ErrorMessage = "Ride difficulty level must be between 1 and 3.")]
         public int RideDifficultyLevel { get; set; } = 1;
 
-        public int RideAgeRequirement { get; set; }
     }
 }

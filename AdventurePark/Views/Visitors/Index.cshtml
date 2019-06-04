@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<AdventurePark.Models.Visitors>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Visitor list";
 }
 
-<h2>Index</h2>
+<h2>Visitor list</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.VisitorFirstName)
+            First name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.VisitorLastName)
+            Last name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.VisitorAge)
+            Age
         </th>
         <th></th>
     </tr>

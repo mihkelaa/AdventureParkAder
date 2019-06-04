@@ -15,9 +15,6 @@
         <th>
             Difficulty level
         </th>
-        <th>
-            Age requirement
-        </th>
         <th></th>
     </tr>
 
@@ -28,9 +25,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RideDifficultyLevel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RideAgeRequirement)
         </td>
         <td>
             @Html.ActionLink("Choose this one", "RideRollerCoaster", new { id=item.RideID })

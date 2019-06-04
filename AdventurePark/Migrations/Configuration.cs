@@ -26,26 +26,22 @@ namespace AdventurePark.Migrations
                 new Rides
                 {
                     RideName = "The Tornado",
-                    RideDifficultyLevel = 2,
-                    RideAgeRequirement = 8
+                    RideDifficultyLevel = 2
                 },
                 new Rides
                 {
                     RideName = "Lazy River",
-                    RideDifficultyLevel = 1,
-                    RideAgeRequirement = 6
+                    RideDifficultyLevel = 1
                 },
                 new Rides
                 {
                     RideName = "Ali Baba",
-                    RideDifficultyLevel = 3,
-                    RideAgeRequirement = 12
+                    RideDifficultyLevel = 3
                 },
                 new Rides
                 {
                     RideName = "Alpine Slide",
-                    RideDifficultyLevel = 2,
-                    RideAgeRequirement = 10
+                    RideDifficultyLevel = 2
                 });
             SeedMemberShip(context);
            

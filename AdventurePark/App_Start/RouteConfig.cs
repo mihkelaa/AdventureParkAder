@@ -16,7 +16,7 @@ namespace AdventurePark
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Rides", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Visitors", action = "Create", id = UrlParameter.Optional }
             );
         }
     }

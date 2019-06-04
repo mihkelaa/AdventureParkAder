@@ -15,6 +15,7 @@ namespace AdventurePark.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Visitors
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Visitors.ToList());
