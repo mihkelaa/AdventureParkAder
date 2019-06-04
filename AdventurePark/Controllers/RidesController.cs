@@ -20,12 +20,15 @@ namespace AdventurePark.Controllers
             return View(db.Rides.ToList());
         }
 
+
+        //Administraatori lehekülg
         [Authorize]
         public ActionResult IndexAdmin()
         {
             return View(db.Rides.ToList());
         }
 
+        //Valitud sõidu alustamine
         public ActionResult RideRollerCoaster()
         {
            return View();

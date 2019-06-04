@@ -9,9 +9,9 @@ namespace AdventurePark.Models
     public class Visitors
     {
         [Key]
-        public int VisitorID { get; set; } 
-        public string VisitorFirstName { get; set; }
-        public string VisitorLastName { get; set; }
-        public int VisitorAge { get; set; }
+        public int VisitorID { get; set; } //Külastaja peavõti
+        public string VisitorFirstName { get; set; } //Külastaja Eesnimi
+        public string VisitorLastName { get; set; } //Külastaja Perenimi
+        public int VisitorAge { get; set; } //Külastaja vanus
     }
 }

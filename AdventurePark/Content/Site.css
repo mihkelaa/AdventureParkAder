@@ -1,8 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("park.png"); /*Taustapildi määramine*/
-    background-size: cover; /* Katab terve tausta pildiga ära*/
+    background-image: url("background.jpg"); /*Taustapildi määramine*/
 }
 
 /* Set padding to keep content from hitting the edges */
