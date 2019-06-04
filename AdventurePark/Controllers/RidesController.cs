@@ -20,6 +20,13 @@ namespace AdventurePark.Controllers
             return View(db.Rides.ToList());
         }
 
+        [Authorize]
+        public ActionResult IndexAdmin()
+        {
+            return View(db.Rides.ToList());
+        }
+
+
         // GET: Rides/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,6 +43,7 @@ namespace AdventurePark.Controllers
         }
 
         // GET: Rides/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
