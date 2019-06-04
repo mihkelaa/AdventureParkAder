@@ -12,7 +12,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.RideName)
+            Ride name
         </dt>
 
         <dd>
@@ -20,19 +20,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RideDifficultyLevel)
+            Difficulty level
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.RideDifficultyLevel)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.RideAgeRequirement)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RideAgeRequirement)
         </dd>
 
     </dl>
@@ -42,7 +34,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to List", "IndexAdmin")
         </div>
     }
 </div>
