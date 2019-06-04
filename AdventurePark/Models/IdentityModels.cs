@@ -29,5 +29,7 @@ namespace AdventurePark.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<AdventurePark.Models.Rides> Rides { get; set; }
     }
 }

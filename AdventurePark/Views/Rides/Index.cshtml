@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AdventurePark.Models.Rides>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RideName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RideDifficultyLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RideAgeRequirement)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RideName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RideDifficultyLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RideAgeRequirement)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RideID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RideID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RideID })
+        </td>
+    </tr>
+}
+
+</table>
