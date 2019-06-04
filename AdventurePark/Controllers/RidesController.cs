@@ -26,6 +26,12 @@ namespace AdventurePark.Controllers
             return View(db.Rides.ToList());
         }
 
+        public ActionResult RideRollerCoaster()
+        {
+            
+            return View();
+        }
+
 
         // GET: Rides/Details/5
         public ActionResult Details(int? id)

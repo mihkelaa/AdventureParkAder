@@ -48,6 +48,8 @@ namespace AdventurePark.Models
 
     public class LoginViewModel
     {
+
+
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]
@@ -60,6 +62,8 @@ namespace AdventurePark.Models
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
+
+
     }
 
     public class RegisterViewModel

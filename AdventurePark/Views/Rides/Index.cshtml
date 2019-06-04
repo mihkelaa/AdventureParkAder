@@ -1,22 +1,22 @@
 ﻿@model IEnumerable<AdventurePark.Models.Rides>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Available rides ";
 }
 
-<h2>Index</h2>
+<h2>Available rides</h2>
 
 
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.RideName)
+            Ride name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RideDifficultyLevel)
+            Difficulty level
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RideAgeRequirement)
+            Age requirement
         </th>
         <th></th>
     </tr>
@@ -33,9 +33,7 @@
             @Html.DisplayFor(modelItem => item.RideAgeRequirement)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RideID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RideID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RideID })
+            @Html.ActionLink("Choose this one", "RideRollerCoaster", new { id=item.RideID })
         </td>
     </tr>
 }
